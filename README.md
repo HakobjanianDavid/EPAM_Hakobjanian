@@ -1,1 +1,1 @@
-# EPAM_Hakobjanian
+# Студенческий репозиторий EPAM
