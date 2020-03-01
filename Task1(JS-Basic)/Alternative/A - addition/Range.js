@@ -25,5 +25,3 @@ function makeArray(a, b, c) {
     }
     return result;
 }
-
-console.log(makeArray(10, 1, 3));

@@ -1,5 +1,5 @@
 function chessBoard(a, b) {
-    let board = '\n'; // we can don't using shifting
+    let board = '\n'; // we can not use shifting
     const slash = '#';
 
     for(let i = 1; i <= b; i++) {
@@ -17,4 +17,3 @@ function chessBoard(a, b) {
     }
     return board; // we can delete last shifting with "slice(0, board.length -1)"
 }
-console.log(chessBoard(14, 4));
