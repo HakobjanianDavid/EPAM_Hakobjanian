@@ -1,6 +1,6 @@
 const goods = [
     {
-        id: 2,
+        id: 1,
         name: 'Banana',
         rating: 4.1,
         description: 'yellow fruit',
@@ -8,7 +8,7 @@ const goods = [
         category: 'food'
     },
     {
-        id: 1,
+        id: 2,
         name: 'Red Banana',
         rating: 4.2,
         description: 'red fruit',
@@ -57,20 +57,6 @@ function getItemByName(goods, name) {
     });
 }
 
-function filter(goods, field, option) {
-    if(option === 'min->max' || option === undefined) {
-        if(field === 'rating' || field === 'id' || field === 'price') {
-            return goods.sort((firstProduct, secondProduct) => firstProduct[field] > secondProduct[field] ? 1 : -1);
-        }
-    }
-
-    if(option === 'max->min') {
-        if(field === 'rating' || field === 'id' || field === 'price') {
-            return goods.sort((firstProduct, secondProduct) => firstProduct[field] < secondProduct[field] ? 1 : -1);
-        }
-    }
-
-}
 
 function deleteItem(goods, id) {
     return goods.filter((el) => {
