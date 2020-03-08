@@ -48,4 +48,34 @@ function checkCardCvvCode(code) {
     return codeRegExp.test(code);
 }
 
-export {checkEmail, checkPassword, checkCardNumber, checkCardOwner, checkCardCvvCode};
+function passwordAndLoginChecking (input, checkFunc, trueReturnedFunction, falseReturnedFunction, alertNote) {
+    if( input !== '' && input !== null) {
+        if(checkFunc(input)) {
+            return trueReturnedFunction(); 
+        } else {
+            alert(alertNote);
+            return falseReturnedFunction();
+        }
+    } else {
+        alert(alertNote);
+        return falseReturnedFunction();
+    }
+}
+
+function numberAndOwnerCheck(input, checkFunc, nextFunction, mainMenuReturn, wrongAnswerFunction, alertNote) {
+    if( input !== '' && input !== null) {
+        if (checkFunc(input) && input !== '2') {
+            return nextFunction();
+        }
+        if (input === '2') {
+            return mainMenuReturn();
+        } else {
+            return wrongAnswerFunction();
+        }
+    } else {
+        alert(alertNote);
+        return wrongAnswerFunction();
+    }
+}
+
+export {checkEmail, checkPassword, checkCardNumber, checkCardOwner, checkCardCvvCode, passwordAndLoginChecking, numberAndOwnerCheck};

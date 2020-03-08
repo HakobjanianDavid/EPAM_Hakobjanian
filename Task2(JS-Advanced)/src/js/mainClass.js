@@ -11,7 +11,7 @@ class Menu {
 
     print() {
         this.prescriptio = `Нет такого пункта меню!`;
-        alert(this.prescriptio);
+        return alert(this.prescriptio);
     }
 
     preparePrescriptio() {
