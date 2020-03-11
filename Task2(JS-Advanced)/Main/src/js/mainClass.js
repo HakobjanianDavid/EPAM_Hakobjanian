@@ -1,4 +1,4 @@
-import { cartCount } from './common';
+import { amountItemsInBasket } from './common';
 
 class Menu {
     constructor(page, itemsList = [], actsList = []) {
@@ -15,7 +15,7 @@ class Menu {
     }
 
     preparePrescriptio() {
-        return `Добро пожаловать в наш магазин!\nКорзина: ${cartCount}\nСтраница: ${this.page}\nМеню:\n${this.list}${this.actions}`;
+        return `Добро пожаловать в наш магазин!\nКорзина: ${amountItemsInBasket}\nСтраница: ${this.page}\nМеню:\n${this.list}${this.actions}`;
     }
 
     prepareList() {

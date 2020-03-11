@@ -1,22 +1,55 @@
+const types = {
+    product: 1,
+    menuOption: 2
+};
+
 const mainMenuList = [
     'Товары',
     'Корзина'
 ];
 
 const productsList = [
-    'Товар 1',
-    'Товар 2',
-    'Товар 3'
+    {
+        name: 'Товар 1',
+        typeId: types.product
+    },
+    {
+        name: 'Товар 2',
+        typeId: types.product
+    }, 
+    {
+        name: 'Товар 3',
+        typeId: types.product
+    },
 ];
+
+// interface someInt  {
+//     name: string,
+//     typeId : number,
+// }
 
 const productsActs = [
-    'Корзина',
-    'Вернуться на главную страницу'
+    {
+        name: 'Корзина',
+        typeId:  types.menuOption,
+    },
+    { 
+        name: 'Вернуться на главную страницу',
+        typeId: types.menuOption,
+    },
 ];
 
+
+
 const cartActs = [
-    'Оплата',
-    'Вернуться на главную страницу'
+    {
+        name: 'Оплата',
+        typeId: types.menuOption,
+    },
+    {
+        name: 'Вернуться на главную страницу',
+        typeId: types.menuOption,
+    }
 ];
 
 const cardNumberActs = [
@@ -34,4 +67,4 @@ const cardCVVActs = [
     'Вернуться на главную страницу'
 ];
 
-export {mainMenuList, productsList, productsActs, cartActs, cardNumberActs, cardOwnerActs, cardCVVActs};
+export { mainMenuList, productsList, productsActs, cartActs, cardNumberActs, cardOwnerActs, cardCVVActs };
